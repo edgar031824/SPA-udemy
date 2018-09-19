@@ -1,0 +1,16 @@
+<h1 class="animated fadeIn fast">{{heroe.nombre|uppercase}} &nbsp;<small>({{heroe.aparicion|date:'y'}})</small></h1>
+<hr>
+<div class="row">
+  <div class="col-md-4">
+  <img class="card-img-top" src={{heroe.img}}>
+  <br><br><br>
+    <button [routerLink]="['/heroes']" type="button" click class="btn btn-outline-primary btn-block">Atrás...</button>
+  </div>
+  <div class="col-md-8">
+    <p>{{heroe.bio}}</p>
+    <div class="container">
+      <img class="img-card" src={{src}}>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<h1>Héroes <small>Marvel y DC</small></h1>
+<hr>
+
+<div class="card-columns">
+  <!--el interador esta recorriendo la varible heroes que es un arreglo que se ecuentra en el component.ts -->
+  <div class="card animated fadeIn fast" *ngFor="let i of heroes;let u=index">
+    <img class="card-img-top" src={{i.img}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{i.nombre}}</h5>
+      <p class="card-text">{{i.bio}}</p>
+      <p class="card-text"><small class="text-muted">{{i.aparicion}}</small></p>
+    </div>
+  <!-- se muestra la vista heroe por medio de codigo-->
+    <button (click)='verHeroe(u)'type="button" click class="btn btn-outline-primary btn-block">Ver más...</button>
+    <!-- se muestra la vista heroe por medio del routerlink-->
+    <!-- se coloca / para insetar en la url de esta vista la dirección a la vista heroe-->
+    <!--<a [routerLink]="['/heroe',u]" class="btn btn-outline-primary">Ver más...</a>-->
+  </div>
+</div>
